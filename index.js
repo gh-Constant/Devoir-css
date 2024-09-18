@@ -1,3 +1,5 @@
+// Creation de la liste des jeux à mettre dans le site web
+
 const games = [
     { title: "League of Legends", developer: "Riot Games", image: "lol.jpg" },
     { title: "Minecraft", developer: "Mojang Studios", image: "minecraft.png" },
@@ -8,9 +10,12 @@ const games = [
     { title: "Pokemon Lune", developer: "Nintendo", image: "pokemon.jpg" }
 ];
 
+// Fonction principale pour créer les jeux sur l'interface
+// J'utilise w3.org pour prendre les images en svg des likes, vues
+
 function createGameCard(game) {
     return `
-        <div class="game-card">
+        <div class="game-card"> 
             <img src="${game.image}" alt="${game.title}">
             <div class="game-info">
                 <h3 class="game-title">${game.title}</h3>
@@ -34,6 +39,8 @@ function createGameCard(game) {
         </div>
     `;
 }
+
+// La fonction sera éxecuté directement aprés le chargement du site (DOMContentLoaded) et rajoutera dans la div gameGrid les jeux un à un
 
 function renderGameGrid() {
     const gameGrid = document.getElementById('gameGrid');
