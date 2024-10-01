@@ -1,0 +1,11 @@
+input[type = "checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + label{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+}
